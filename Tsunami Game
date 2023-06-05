@@ -1,1 +1,124 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CiraHub/Main/main/Tsunami%20Game?token=GHSAT0AAAAAACDQU7Y5736FU22LDO2TDAH6ZD52PWQ"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Cira Hub | Key System", HidePremium = false, SaveConfig = true, IntroText = "Cira Hub", ConfigFolder = "Cira Hub"})
+
+OrionLib:MakeNotification({
+	Name = "Loggen in!",
+	Content = "You are logged in as "..Player.Name..".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+_G.Key = "CiraHub_Key_092"
+_G.KeyInpute = "string"
+
+function MakeScriptHub()
+game:GetService("CoreGui").Orion:Destroy()
+	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Cira Hub | Tsunami Game", HidePremium = false, SaveConfig = true, IntroText = "Cira Hub", ConfigFolder = "Cira Hub"})
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+    })
+
+    local Section = Tab:AddSection({
+        Name = "Edit By Jotaro#3028"
+    })
+
+    Tab:AddButton({
+        Name = "infintije yieal",
+        Callback = function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+          end    
+    })
+
+    local Section = Tab:AddSection({
+        Name = "Telepod"
+    })
+
+    Tab:AddButton({
+        Name = "Chrome Banana",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(170, -2093.5, -19.4999981, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "Survival Gear Shop",
+        Callback = function()
+                 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-107.653397, 122.2248, 962.5271, -0.976667762, 2.68753766e-08, 0.214755908, 6.57165478e-09, 1, -9.5257235e-08, -0.214755908, -9.16233631e-08, -0.976667762)
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "Winner Shop",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.14531326293945, 40.224830627441406, -1005.9816284179688)
+          end    
+    })
+
+    Tab:AddButton({
+        Name = "Bob Robert Shop",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(158.983551, 121.827713, -548.638611, 0.99909699, 0.0106693208, -0.0411276035, -0.00985106453, 0.999750495, 0.020047171, 0.0413312316, -0.0196239166, 0.998952746)
+          end    
+    })
+end
+
+function Destroy()
+    game:GetService("CoreGui").Orion:Destroy()
+end
+
+function CorrectkeyNotification()
+	OrionLib:MakeNotification({
+		Name = "Correct Key!",
+		Content = "You have entered the correct key! ",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+function IncorrectkeyNotification()
+	OrionLib:MakeNotification({
+		Name = "Incorrect Key!",
+		Content = "You have entered the Incorrect key! ",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInpute = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Check Key!",
+	Callback = function()
+      		if _G.KeyInpute == _G.Key then
+				MakeScriptHub()
+				CorrectkeyNotification()
+				else
+				IncorrectkeyNotification()
+			end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Get Key In Discord!",
+	Callback = function()
+        setclipboard("https://discord.gg/Rtwt634MBs")
+  	end    
+})
